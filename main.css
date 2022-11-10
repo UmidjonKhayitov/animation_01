@@ -1,0 +1,65 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+  
+
+}
+.container .father{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .father .box{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(35, 3, 216);
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.container .father .box:nth-child(1){
+    z-index: 3;
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    animation-delay: 0s;
+}
+.container .father .box:nth-child(2){
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(81, 81, 243);
+    animation-delay: .3s;
+}
+.container .father .box:nth-child(3){
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(134, 134, 251);
+    animation-delay: .7s;
+}
+
+@keyframes anim {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(60px);
+    }
+}
